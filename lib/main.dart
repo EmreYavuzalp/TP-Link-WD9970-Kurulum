@@ -93,7 +93,6 @@ Future<void> skipSteps() async {
   var skipBtnExists = await _controller.runJavaScriptReturningResult('''
     document.getElementById("skipBtn") ? true : false;
   ''');
-  debugPrint("buton var mı kontrol ediliyor.");
   
   if (skipBtnExists == true || skipBtnExists.toString() == 'true') {
     await _controller.runJavaScript('''
